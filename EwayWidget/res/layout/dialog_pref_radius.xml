@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title_pref_nearby_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:textColor="#626c70"
+        android:textSize="18sp"
+        android:text="@string/nearby" />
+
+    <TextView
+        android:id="@+id/summary_pref_nearby_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textColor="#00bfe5"
+        android:textSize="16sp" />
+
+    <com.gc.materialdesign.views.Slider
+        android:id="@+id/seek_bar_pref_nearby_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00bfe5"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        materialdesign:max="60"
+        android:progress="30" />
+
+</LinearLayout>

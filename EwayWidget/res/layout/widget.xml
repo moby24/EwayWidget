@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layoutHead"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#000000"
+        android:gravity="left|center_vertical" >
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/ic_launcher" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRefresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageViewRefresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/icn_refresh_free"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageIcon"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/load_title"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.85"
+            android:background="#80000000"
+            android:divider="#20ffffff"
+            android:dividerHeight="1dp" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/layoutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:background="#000000"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textInfoGPS"
+                style="@style/GreenText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="GPS"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+             <TextView
+                 android:id="@+id/textInfoSHADLE"
+                 style="@style/BlueText"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/textInfoGPS"
+                 android:layout_alignBottom="@+id/textInfoGPS"
+                 android:layout_marginLeft="15dp"
+                 android:layout_toRightOf="@+id/textInfoGPS"
+                 android:text="Розклад"
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textInfoINTERVAL"
+                style="@style/OrangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textInfoSHADLE"
+                android:layout_alignBottom="@+id/textInfoSHADLE"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/textInfoSHADLE"
+                android:text="Інтервал"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+             <TextView
+                 android:id="@+id/tvLastUpdateTime"
+                 style="@style/WhiteText"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/textInfoINTERVAL"
+                 android:layout_alignBottom="@+id/textInfoINTERVAL"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="15dp"
+                 android:text="HH:mm:ss"
+                 android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
